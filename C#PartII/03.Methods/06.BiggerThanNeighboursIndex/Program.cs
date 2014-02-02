@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _06.BiggerThanNeighboursIndex
+{
+    class Program
+    {
+        static int[] InitializeArray()
+        {
+            Console.Write("Enter number of elements:");
+            int numberElements = int.Parse(Console.ReadLine());
+            int[] Array = new int[numberElements];
+            for (int i = 0; i < numberElements; i++)
+            {
+                Console.Write("arrayElement[{0}] = ");
+                Array[i] = int.Parse(Console.ReadLine());
+            }
+            return Array;
+        }
+
+        static int GetMax(int integer1, int integer2)
+        {
+            int biggerNumber = integer1;
+            if (integer1 < integer2)
+            {
+                biggerNumber = integer2;
+            }
+            return biggerNumber;
+        }
+
+        static bool BiggerThanNeighbours(int elementPos, int[] givenArray)
+        {
+            bool comparisonNeighbours = false;
+            if (GetMax(givenArray[elementPos - 1], givenArray[elementPos]) == givenArray[elementPos] && GetMax(givenArray[elementPos + 1], givenArray[elementPos]) == givenArray[elementPos])
+            {
+                comparisonNeighbours = true;
+            }
+            return comparisonNeighbours;
+        }
+
+        static bool Validation(int elementPos, int[] givenArray)
+        {
+            bool valid = false;
+            if (elementPos <= givenArray.Length - 1 && elementPos >= 1)
+            {
+                valid = true;
+            }
+            return valid;
+        }
+
+        static int IndexBiggerElement(int[] givenArray)
+        {
+            for (int i = 0; i < givenArray.Length; i++)
+            {
+                if (Validation(i, givenArray))
+                {
+                    if (BiggerThanNeighbours(i, givenArray))
+                    {
+                        return i;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+                else
+                {
+                    return -1;
+                }
+
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            int[] givenArray = InitializeArray();
+            Console.WriteLine(IndexBiggerElement(givenArray));
+        }
+    }
+}
