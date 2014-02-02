@@ -1,0 +1,51 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    text-indent:12px;
+}
+table {
+    font-size:22px;
+    font-family: Arial;
+    border-collapse: collapse;
+}
+thead {
+    background-color: #55b806;
+    height:42px;
+    color:white;
+    border-bottom: 2px solid  #c3c2a7;
+}
+.Flag {
+    height: 1em;
+    width: 1.5em;
+    display:inline-block;
+}
+p {
+    display: inline-block;
+}
+tr:nth-of-type(2n) {
+    background-color: #ececd8;
+}
+td:nth-of-type(1) {
+    width: 250px;
+    height:50px;
+}
+td:nth-of-type(2) {
+    width: 200px;
+    height:50px;
+    border-left:2px solid #c3c2a7;
+}
+td:nth-of-type(3) {
+    width: 220px;
+    height:50px;
+    border-left:2px solid #c3c2a7;
+
+}
+td:nth-of-type(4) {
+    width: 150px;
+    height:50px;
+    border-left:2px solid #c3c2a7;
+}
+tbody td:nth-of-type(4n) {
+    text-indent: 22px;
+}
+

@@ -1,0 +1,39 @@
+﻿* {
+    background-color: #a9a9a9;
+}
+h1 {
+    color: #fafad2;
+    text-align: center;
+}
+section article header h1 {
+    text-align: left;
+    font-size: 25px;
+}
+nav ul li{
+    text-align: center;
+    list-style: none;
+    
+}
+a {
+    text-decoration: none;
+    color:white;
+    font-weight:bold;
+}
+.current {
+    background-color: #d3d3d3;
+}
+nav ul li:nth-of-type(4) a {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 12px;
+}
+    footer p a {
+        color: black;
+        font-weight:normal;
+    }
+body>footer {
+    text-align: center;
+    font-size: 15px;
+}
